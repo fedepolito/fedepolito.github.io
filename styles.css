@@ -27,9 +27,10 @@ body {
 nav {
   position: sticky;
   top: 0;
-  background: rgba(13, 17, 23, 0.95);
+  background: rgba(13, 17, 23, 0.98);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(10px);
+  z-index: 1000; /* 🔑 ¡ESTO ES LO IMPORTANTE! */
 }
 
 .nav-container {
@@ -224,6 +225,9 @@ h2 {
   font-weight: 500;
   transition: all 0.3s ease;
   border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .project-link:hover {
