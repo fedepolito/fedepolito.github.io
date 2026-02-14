@@ -27,33 +27,9 @@ body {
 nav {
   position: sticky;
   top: 0;
-  background: rgba(13,17,23,0.95);
+  background: rgba(13, 17, 23, 0.95);
   border-bottom: 1px solid var(--border);
-}
-
-.hero-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.btn-social {
-  background: var(--card);
-  color: var(--accent);
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.btn-social:hover {
-  background: var(--accent);
-  color: #0d1117;
+  backdrop-filter: blur(10px);
 }
 
 .nav-container {
@@ -81,6 +57,7 @@ nav a {
   text-decoration: none;
   color: var(--text);
   font-size: 0.9rem;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -94,6 +71,7 @@ nav a:hover {
 
 .hero h1 {
   font-size: 2.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .role {
@@ -111,17 +89,30 @@ nav a:hover {
 .hero-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.hero-links a {
+.btn-social {
+  background: var(--card);
   color: var(--accent);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
   text-decoration: none;
   font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
 }
 
-.hero-links a:hover {
-  text-decoration: underline;
+.btn-social:hover {
+  background: var(--accent);
+  color: #0d1117;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 main {
@@ -137,6 +128,7 @@ section {
 h2 {
   color: var(--accent);
   margin-bottom: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .skills {
@@ -151,18 +143,94 @@ h2 {
   padding: 0.6rem;
   text-align: center;
   border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
-.project {
+.skills span:hover {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ======== GRID DE PROYECTOS ======== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
   background: var(--card);
   border: 1px solid var(--border);
-  padding: 1.2rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-.project h3 {
-  margin-bottom: 0.3rem;
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+              0 0 0 2px var(--accent);
+}
+
+.project-card h3 {
+  margin-bottom: 0.6rem;
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  margin-bottom: 0.6rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-card .tech {
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: #0d1117;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent);
+}
+
+.project-link:hover {
+  background: transparent;
+  color: var(--accent);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 .item {
@@ -171,27 +239,57 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.item h3 {
+  margin-bottom: 0.3rem;
+}
+
 footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.85rem;
   color: var(--muted);
+  border-top: 1px solid var(--border);
 }
 
-.project-link {
-  display: inline-block;
-  margin-top: 0.6rem;
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 0.9rem;
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    display: none;
+  }
+  
+  .hero-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .btn-social {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-.project-link:hover {
-  text-decoration: underline;
-}
-
-.tech {
-  margin-top: 0.4rem;
-  color: var(--muted);
-  font-size: 0.9rem;
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .role {
+    font-size: 1rem;
+  }
+  
+  .nav-container {
+    padding: 0.8rem;
+  }
 }
