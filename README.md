@@ -4,81 +4,58 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/federico-polito)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fedepolitodev@gmail.com)
 
-**Desarrollador de Software Junior** | Portfolio Personal
+**Desarrollador de Software Trainee** | Portfolio Personal
 
-Bienvenido a mi portfolio personal. Aca vas a poder encontrar información sobre mis habilidades, proyectos y experiencia en desarrollo de software.
-
-## Vista Previa
-
-Podes ver mi portfolio en vivo!
 **https://fedepolito.github.io/**
+
+---
 
 ## Sobre Mí
 
-Soy **Federico Polito**, desarrollador de software junior con formación técnica y experiencia en proyectos académicos y personales. Me especializo en desarrollo web y soluciones en Python, buscando mi primera experiencia profesional en el área IT.
-
-### Objetivos
-
-- Desarrollar aplicaciones web robustas y escalables
-- Aprender de desarrolladores con experiencia
-- Contribuir en proyectos
-- Crecer profesionalmente en un equipo de desarrollo
+Soy Federico Polito, estudiante de 3° año de Técnico Superior en Desarrollo de Software. Busco mi primera experiencia en IT. Me destaco por organización, resolución de problemas y aprendizaje continuo.
 
 ---
 
 ## Tecnologías Utilizadas
 
-* **HTML5**: Estructura semántica y organización del contenido web.
-* **CSS3**: Diseño visual, gestión de tipografías e interfaz adaptable.
-* **JavaScript**: Interactividad, lógica del menú y efectos de desplazamiento.
-* **Font Awesome**: Integración de iconografía profesional.
-* **Google Fonts**: Optimización de la legibilidad tipográfica.
+- **HTML5** - Estructura semántica
+- **CSS3** - Diseño visual y responsive
+- **JavaScript** - Interactividad y lógica
+- **Font Awesome** - Iconografía
+- **Google Fonts** - Tipografía
 
 ---
 
 ## Habilidades Técnicas
 
-### Lenguajes de Programación
-- Python
-- JavaScript
-- PHP
-- C
-- SQL
+**Lenguajes:** Python, JavaScript, PHP, C, SQL
 
-### Tecnologías Web
-- HTML5
-- CSS3
-- React
-- React Native
-- Expo
-- TypeScript
-- Tailwind CSS
-- Bootstrap
+**Frontend:** HTML, CSS, React, React Native
 
-### Bases de Datos
-- MySQL
+**Backend:** PHP, MySQL
 
-### Herramientas
-- Git
-- GitHub
-- npm
-- Composer
-- Symfony
+**Herramientas:** Git, GitHub, VS Code, Excel
+
+---
+
+## Proyectos Destacados
+
+| Proyecto | Descripción |
+|----------|-------------|
+| **[Venta de Entradas](https://fedepolito.github.io/venta-entradas)** | Sistema full-stack para gestión de conciertos con API REST |
+| **[Maratón Ituzaingó](https://fedepolito.github.io/maraton-frontend)** | Plataforma municipal de inscripciones con generación de QR |
+| **[Jarvis](https://github.com/fedepolito/jarvis-python)** | Asistente por voz para automatización en Windows |
+| **[Tienda Fabrega](https://github.com/fedepolito/fabrega-app)** | App móvil de e-commerce con React Native |
 
 ---
 
 ## Cómo Ver el Proyecto Localmente
 
-### Requisitos
-- Navegador web
-
-### Pasos
-
-1. **Clonar el repositorio**
 ```bash
-git clone https://github.com/fedepolito/portfolio.git
-cd portfolio
+git clone https://github.com/fedepolito/fedepolito.github.io.git
+cd fedepolito.github.io
 ```
 
-Este es un proyecto personal, pero si encontras errores o tenes alguna sugerencia, no dudes en hacermelo saber.
-¡Gracias por visitar mi portfolio!
+Abrir `index.html` en el navegador.
+
+Gracias por visitar mi portfolio!
