@@ -5,6 +5,7 @@
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fedepolitodev@gmail.com)
 
 **Desarrollador de Software Trainee**
+
 Portfolio: https://fedepolito.github.io/
 
 ---
@@ -46,4 +47,4 @@ cd fedepolito.github.io
 ```
 Abrir index.html en el navegador.
 
-Gracias por visitar mi portfolio!
+Gracias por pasar. Si te interesa charlar, escribime!
