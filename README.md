@@ -11,7 +11,7 @@ Bienvenido a mi portfolio personal. Aca vas a poder encontrar información sobre
 ## Vista Previa
 
 Podes ver mi portfolio en vivo!
-**https://fedepolito.github.io/portfolio/**
+**https://fedepolito.github.io/**
 
 ## Sobre Mí
 
