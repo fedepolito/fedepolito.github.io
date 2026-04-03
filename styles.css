@@ -1,7 +1,6 @@
-/* ============================================================
-   VARIABLES
-   ============================================================ */
-:root {
+/* dark theme */
+:root,
+[data-theme="dark"] {
   --bg: #010409;
   --bg-card: #0d1117;
   --bg-card2: #161b22;
@@ -15,34 +14,46 @@
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
   --shadow-md: 0 8px 24px rgba(0,0,0,0.4);
   --shadow-lg: 0 16px 48px rgba(0,0,0,0.5);
-  --radius: 12px;
-  --transition: all 0.25s ease;
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --nav-bg: rgba(1, 4, 9, 0.85);
 }
 
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
+/* light theme */
+[data-theme="light"] {
+  --bg: #f6f8fa;
+  --bg-card: #ffffff;
+  --bg-card2: #f0f2f5;
+  --accent: #0d9e6e;
+  --accent-dim: rgba(13, 158, 110, 0.1);
+  --accent-glow: rgba(13, 158, 110, 0.2);
+  --text: #1c2128;
+  --text-muted: #57606a;
+  --border: #d0d7de;
+  --border-hover: #b1bac4;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.16);
+  --nav-bg: rgba(246, 248, 250, 0.88);
+}
+
+/* reset & base */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--font-body);
+  font-family: 'DM Sans', sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.65;
   font-size: 1rem;
   font-weight: 400;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ============================================================
-   NAV
-   ============================================================ */
+/* nav */
 nav {
-  background: rgba(1, 4, 9, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -50,6 +61,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .nav-container {
@@ -61,7 +73,7 @@ nav {
 }
 
 .logo {
-  font-family: var(--font-display);
+  font-family: 'Syne', sans-serif;
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--accent);
@@ -82,7 +94,7 @@ nav ul a {
   font-weight: 500;
   padding: 0.4rem 0.75rem;
   border-radius: 6px;
-  transition: var(--transition);
+  transition: all 0.25s ease;
 }
 
 nav ul a:hover,
@@ -99,7 +111,40 @@ nav ul a.nav-cta {
 
 nav ul a.nav-cta:hover {
   background: var(--accent);
-  color: #000;
+  color: #fff;
+}
+
+[data-theme="light"] nav ul a.nav-cta:hover {
+  color: #fff;
+}
+
+/* Nav actions (toggle + hamburguesa) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
 }
 
 .nav-toggle {
@@ -112,9 +157,7 @@ nav ul a.nav-cta:hover {
   padding: 0.4rem;
 }
 
-/* ============================================================
-   HERO — SPLIT LAYOUT
-   ============================================================ */
+/* hero split layout */
 .hero {
   min-height: calc(100vh - 57px);
   display: flex;
@@ -133,7 +176,6 @@ nav ul a.nav-cta:hover {
 }
 
 .hero-greeting {
-  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--accent);
   font-weight: 500;
@@ -143,7 +185,7 @@ nav ul a.nav-cta:hover {
 }
 
 .hero-text h1 {
-  font-family: var(--font-display);
+  font-family: 'Syne', sans-serif;
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 800;
   line-height: 1.05;
@@ -179,24 +221,24 @@ nav ul a.nav-cta:hover {
   margin-bottom: 2rem;
 }
 
-/* Buttons */
+/* botones */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.7rem 1.4rem;
   background: var(--accent);
-  color: #000;
+  color: #fff;
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
   border-radius: 8px;
-  transition: var(--transition);
-  font-family: var(--font-body);
+  transition: all 0.25s ease;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .btn-primary:hover {
-  background: #0ccd92;
+  filter: brightness(1.1);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px var(--accent-glow);
 }
@@ -218,7 +260,7 @@ nav ul a.nav-cta:hover {
   text-decoration: none;
   border-radius: 8px;
   border: 1px solid var(--border-hover);
-  transition: var(--transition);
+  transition: all 0.25s ease;
 }
 
 .btn-outline:hover {
@@ -227,6 +269,7 @@ nav ul a.nav-cta:hover {
   transform: translateY(-2px);
 }
 
+/* socials */
 .hero-socials {
   display: flex;
   gap: 0.75rem;
@@ -243,7 +286,7 @@ nav ul a.nav-cta:hover {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: var(--transition);
+  transition: all 0.25s ease;
 }
 
 .hero-socials a:hover {
@@ -303,9 +346,7 @@ nav ul a.nav-cta:hover {
   gap: 0.35rem;
 }
 
-/* ============================================================
-   MAIN LAYOUT
-   ============================================================ */
+/* main layout */
 main {
   max-width: 1100px;
   margin: 0 auto;
@@ -323,7 +364,7 @@ section {
 }
 
 .section-header h2 {
-  font-family: var(--font-display);
+  font-family: 'Syne', sans-serif;
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 700;
   color: var(--text);
@@ -336,9 +377,7 @@ section {
   font-size: 0.95rem;
 }
 
-/* ============================================================
-   HABILIDADES — agrupadas
-   ============================================================ */
+/* habilidades */
 .skills-groups {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -348,9 +387,9 @@ section {
 .skill-group {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 12px;
   padding: 1.5rem;
-  transition: var(--transition);
+  transition: all 0.25s ease;
 }
 
 .skill-group:hover {
@@ -359,7 +398,7 @@ section {
 }
 
 .skill-group h4 {
-  font-family: var(--font-display);
+  font-family: 'Syne', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--accent);
@@ -384,7 +423,7 @@ section {
   border-radius: 20px;
   font-size: 0.85rem;
   color: var(--text-muted);
-  transition: var(--transition);
+  transition: all 0.25s ease;
 }
 
 .skills span:hover {
@@ -393,9 +432,44 @@ section {
   background: var(--accent-dim);
 }
 
-/* ============================================================
-   PROYECTOS
-   ============================================================ */
+/* filtros de proyectos */
+.project-filters {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+[data-theme="light"] .filter-btn.active {
+  color: #fff;
+}
+
+/* tarjetas de proyectos */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -405,11 +479,11 @@ section {
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 12px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
+  transition: all 0.25s ease;
 }
 
 .project-card:hover {
@@ -446,7 +520,7 @@ section {
   border-radius: 6px;
   border: 1px solid var(--border);
   text-decoration: none;
-  transition: var(--transition);
+  transition: all 0.25s ease;
 }
 
 .project-links a:hover {
@@ -456,7 +530,7 @@ section {
 }
 
 .project-card h3 {
-  font-family: var(--font-display);
+  font-family: 'Syne', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text);
@@ -488,9 +562,7 @@ section {
   font-weight: 500;
 }
 
-/* ============================================================
-   FORMACIÓN — timeline
-   ============================================================ */
+/* formacion */
 .timeline {
   max-width: 700px;
   margin: 0 auto;
@@ -513,9 +585,7 @@ section {
   margin-bottom: 2rem;
 }
 
-.timeline-item:last-child {
-  margin-bottom: 0;
-}
+.timeline-item:last-child { margin-bottom: 0; }
 
 .timeline-dot {
   position: absolute;
@@ -532,14 +602,12 @@ section {
 .timeline-content {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 12px;
   padding: 1.25rem 1.5rem;
-  transition: var(--transition);
+  transition: all 0.25s ease;
 }
 
-.timeline-content:hover {
-  border-color: var(--border-hover);
-}
+.timeline-content:hover { border-color: var(--border-hover); }
 
 .item-header {
   display: flex;
@@ -551,7 +619,7 @@ section {
 }
 
 .item-header h3 {
-  font-family: var(--font-display);
+  font-family: 'Syne', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--text);
@@ -571,12 +639,8 @@ section {
   color: var(--text-muted);
 }
 
-/* ============================================================
-   CONTACTO
-   ============================================================ */
-#contacto {
-  text-align: center;
-}
+/* contacto */
+#contacto { text-align: center; }
 
 .contacto-inner {
   max-width: 560px;
@@ -584,7 +648,7 @@ section {
 }
 
 #contacto h2 {
-  font-family: var(--font-display);
+  font-family: 'Syne', sans-serif;
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   color: var(--text);
@@ -614,16 +678,12 @@ section {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  transition: var(--transition);
+  transition: all 0.25s ease;
 }
 
-.contacto-socials a:hover {
-  color: var(--accent);
-}
+.contacto-socials a:hover { color: var(--accent); }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* footer */
 footer {
   display: flex;
   justify-content: space-between;
@@ -638,9 +698,7 @@ footer {
   gap: 0.5rem;
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* responsive */
 @media (max-width: 768px) {
   .nav-toggle { display: block; }
 
@@ -658,7 +716,6 @@ footer {
   }
 
   nav ul.open { display: flex; }
-
   nav ul a { display: block; padding: 0.6rem 1rem; }
 
   .hero {
@@ -681,29 +738,21 @@ footer {
   }
 
   .avatar-ring { border-radius: 22px; }
-
   .hero-text h1 { font-size: 3rem; letter-spacing: -1.5px; }
-
   .value { max-width: 100%; }
-
   .hero-links { justify-content: center; }
-
   .hero-socials { justify-content: center; }
-
   .skills-groups { grid-template-columns: 1fr 1fr; }
-
   .projects-grid { grid-template-columns: 1fr; }
-
   footer { justify-content: center; text-align: center; }
 }
 
 @media (max-width: 480px) {
   main { padding: 0 1.25rem; }
-
   .skills-groups { grid-template-columns: 1fr; }
-
   .hero-text h1 { font-size: 2.5rem; }
-
   .timeline { padding-left: 1.5rem; }
   .timeline-dot { left: -1.5rem; }
+  .hero-links { flex-direction: column; }
+  .btn-primary, .btn-outline { justify-content: center; }
 }
