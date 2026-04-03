@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Federico Polito | Desarrollador de Software Junior</title>
+  <title>Federico Polito | Desarrollador de Software</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,219 +15,331 @@
     <div class="nav-container">
       <span class="logo">FP</span>
       <ul>
-        <li><a href="#perfil">Perfil</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#formacion">Formación</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
       </ul>
+      <button class="nav-toggle" aria-label="Menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-avatar">
-      <img src="images/foto.jpeg" alt="Federico Polito" class="avatar">
-    </div>
-    <h1>Federico Polito</h1>
-    <p class="role">Desarrollador de Software Junior</p>
-    <p class="value">
-      Desarrollo aplicaciones web y soluciones en Python.
-      Busco mi primera experiencia profesional en IT.
-    </p>
+  <!-- HERO: split layout -->
+  <header class="hero" id="sobre-mi">
+    <div class="hero-inner">
 
-    <div class="hero-links">
-      <a href="mailto:fedde.polito@gmail.com" class="btn-social">
-        <i class="fa-solid fa-envelope"></i> Contacto
-      </a>
-      <a href="https://github.com/fedepolito" target="_blank" class="btn-social">
-        <i class="fa-brands fa-github"></i> GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/federico-polito" target="_blank" class="btn-social">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </a>
+      <div class="hero-text" data-aos="fade-right" data-aos-duration="800">
+        <p class="hero-greeting">Hola, soy</p>
+        <h1>Federico<br>Polito</h1>
+        <p class="role">Desarrollador de Software <span class="role-sep">·</span> Análisis de Datos</p>
+        <p class="value">
+          Me apasiona construir cosas que funcionen bien y se vean mejor.
+          Desarrollo aplicaciones web, automatizo procesos con Python y
+          estoy profundizando en análisis de datos. Estudiante de 3° año
+          de Tecnicatura en Desarrollo de Software, buscando mi primera
+          experiencia profesional en IT.
+        </p>
+        <div class="hero-links">
+          <a href="#proyectos" class="btn-primary">
+            Ver proyectos <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&to=fedepolitodev@gmail.com" target="_blank" rel="noopener noreferrer" class="btn-outline">
+            <i class="fa-solid fa-envelope"></i> Escribime
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/fedepolito" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/federico-polito" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&to=fedepolitodev@gmail.com" target="_blank" rel="noopener noreferrer" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+        <div class="avatar-wrap">
+          <img src="images/foto.jpeg" alt="Federico Polito" class="avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-badge">
+            <i class="fa-solid fa-circle-check"></i> Disponible
+          </div>
+        </div>
+      </div>
+
     </div>
   </header>
 
   <main>
-    <section id="skills">
-      <h2>Habilidades Técnicas</h2>
-      <div class="skills">
-        <span>Python</span>
-        <span>JavaScript</span>
-        <span>C</span>
-        <span>PHP</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>SQL</span>
-        <span>MySQL</span>
-        <span>Git</span>
-        <span>React</span>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Habilidades</h2>
+        <p class="section-sub">Lo que uso para construir y analizar</p>
+      </div>
+
+      <div class="skills-groups" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="skill-group">
+          <h4><i class="fa-solid fa-code"></i> Lenguajes</h4>
+          <div class="skills">
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>C</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4><i class="fa-solid fa-globe"></i> Web</h4>
+          <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>React</span>
+            <span>React Native</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4><i class="fa-solid fa-chart-bar"></i> Datos</h4>
+          <div class="skills">
+            <span>SQL</span>
+            <span>MySQL</span>
+            <span>Pandas</span>
+            <span>Excel</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4><i class="fa-solid fa-wrench"></i> Herramientas</h4>
+          <div class="skills">
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>VS Code</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section id="perfil">
-      <h2>Perfil Profesional</h2>
-      <p>
-        Desarrollador de software junior con formación técnica y experiencia
-        en proyectos académicos y personales. He trabajado en aplicaciones web
-        y scripts en Python, aplicando buenas prácticas de organización y
-        resolución de problemas.
-      </p>
-      <p>
-        Me interesa incorporarme a un equipo de desarrollo donde pueda aportar
-        soluciones claras, aprender de desarrolladores con experiencia y
-        crecer profesionalmente.
-      </p>
-    </section>
-
+    <!-- PROYECTOS -->
     <section id="proyectos">
-      <h2>Proyectos</h2>
-      
+      <div class="section-header" data-aos="fade-up">
+        <h2>Proyectos</h2>
+        <p class="section-sub">Cosas que construí y que me enorgullecen</p>
+      </div>
+
       <div class="projects-grid">
-        <!-- MARATÓN FRONTEND (Sitio en vivo + código) -->
-        <div class="project-card">
-          <h3>Maratón Ituzaingó - Frontend</h3>
-          <p>
-            Interfaz visual de la plataforma de inscripción para la Maratón Municipal.
-            Diseño responsive y experiencia de usuario optimizada.
-          </p>
-          <p class="tech">
-            <strong>Tecnologías:</strong> HTML, CSS, JavaScript
-          </p>
-          <div class="project-links">
-            <a
-              href="https://fedepolito.github.io/maraton-frontend"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link live"
-            >
-              <i class="fa-solid fa-globe"></i> Ver sitio web
-            </a>
-            <a
-              href="https://github.com/fedepolito/maraton-frontend"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              <i class="fa-brands fa-github"></i> Ver código
-            </a>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-card-top">
+            <span class="project-icon"><i class="fa-solid fa-person-running"></i></span>
+            <div class="project-links">
+              <a href="https://fedepolito.github.io/maraton-frontend" target="_blank" rel="noopener noreferrer" title="Ver sitio">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://github.com/fedepolito/maraton-frontend" target="_blank" rel="noopener noreferrer" title="Ver código">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3>Maratón Ituzaingó</h3>
+          <p>Plataforma de inscripción para la Maratón Municipal. Diseño responsive y experiencia de usuario optimizada.</p>
+          <div class="tech-pills">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
           </div>
         </div>
 
-        <!-- VENTA DE ENTRADAS (Sitio en vivo + código) -->
-        <div class="project-card">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="project-card-top">
+            <span class="project-icon"><i class="fa-solid fa-ticket"></i></span>
+            <div class="project-links">
+              <a href="https://fedepolito.github.io/venta-entradas" target="_blank" rel="noopener noreferrer" title="Ver sitio">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://github.com/fedepolito/venta-entradas" target="_blank" rel="noopener noreferrer" title="Ver código">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
           <h3>Venta de Entradas Online</h3>
-          <p>
-            Sistema web completo para la venta de entradas de conciertos y eventos en vivo.
-            Interfaz visual funcional desplegada en GitHub Pages.
-          </p>
-          <p class="tech">
-            <strong>Tecnologías:</strong> HTML, CSS, JavaScript, PHP, MySQL, API REST
-          </p>
-          <div class="project-links">
-            <a
-              href="https://fedepolito.github.io/venta-entradas"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link live"
-            >
-              <i class="fa-solid fa-globe"></i> Ver sitio web
-            </a>
-            <a
-              href="https://github.com/fedepolito/venta-entradas"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              <i class="fa-brands fa-github"></i> Ver código
-            </a>
+          <p>Sistema web completo para la venta de entradas de eventos. Full-stack con backend PHP y base de datos MySQL.</p>
+          <div class="tech-pills">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
           </div>
         </div>
 
-        <!-- TIENDA FABREGA (Solo código - React Native) -->
-        <div class="project-card">
-          <h3>Tienda Fabrega - React Native</h3>
-          <p>
-            Aplicación móvil de e-commerce desarrollada con React Native y Expo.
-            Incluye navegación drawer, gestión de productos y autenticación.
-          </p>
-          <p class="tech">
-            <strong>Tecnologías:</strong> React Native, Expo, TypeScript, Tailwind CSS
-          </p>
-          <a
-            href="https://github.com/fedepolito/fabrega-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link"
-          >
-            <i class="fa-brands fa-github"></i> Ver código
-          </a>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="project-card-top">
+            <span class="project-icon"><i class="fa-solid fa-mobile-screen"></i></span>
+            <div class="project-links">
+              <a href="https://github.com/fedepolito/fabrega-app" target="_blank" rel="noopener noreferrer" title="Ver código">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3>Tienda Fabrega</h3>
+          <p>App móvil de e-commerce con React Native y Expo. Navegación drawer, gestión de productos y autenticación.</p>
+          <div class="tech-pills">
+            <span>React Native</span><span>Expo</span><span>TypeScript</span>
+          </div>
         </div>
 
-        <!-- JARVIS (Solo código - Python) -->
-        <div class="project-card">
-          <h3>Jarvis - Asistente Virtual en Python</h3>
-          <p>
-            Asistente virtual por comandos de voz con interfaz gráfica Tkinter.
-            Automatiza apertura de sitios web y aplicaciones.
-          </p>
-          <p class="tech">
-            <strong>Tecnologías:</strong> Python, Tkinter, SpeechRecognition, pyttsx3
-          </p>
-          <a
-            href="https://github.com/fedepolito/jarvis-python"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link"
-          >
-            <i class="fa-brands fa-github"></i> Ver código
-          </a>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-card-top">
+            <span class="project-icon"><i class="fa-solid fa-microphone"></i></span>
+            <div class="project-links">
+              <a href="https://github.com/fedepolito/jarvis-python" target="_blank" rel="noopener noreferrer" title="Ver código">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3>Jarvis — Asistente Virtual</h3>
+          <p>Asistente por comandos de voz con interfaz Tkinter. Automatiza apertura de sitios y aplicaciones del sistema.</p>
+          <div class="tech-pills">
+            <span>Python</span><span>Tkinter</span><span>SpeechRecognition</span>
+          </div>
         </div>
 
-        <!-- PORTAL VETERINARIA (Solo código - Python consola) -->
-        <div class="project-card">
-          <h3>Portal de Veterinaria en Python</h3>
-          <p>
-            Aplicación de consola para la gestión de pacientes de una veterinaria.
-            Registro, consulta, modificación y eliminación con persistencia en archivos.
-          </p>
-          <p class="tech">
-            <strong>Tecnologías:</strong> Python, manejo de archivos, Git
-          </p>
-          <a
-            href="https://github.com/fedepolito/portal-veterinaria"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link"
-          >
-            <i class="fa-brands fa-github"></i> Ver código
-          </a>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="project-card-top">
+            <span class="project-icon"><i class="fa-solid fa-paw"></i></span>
+            <div class="project-links">
+              <a href="https://github.com/fedepolito/portal-veterinaria" target="_blank" rel="noopener noreferrer" title="Ver código">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3>Portal de Veterinaria</h3>
+          <p>App de consola para gestión de pacientes. CRUD completo con persistencia en archivos y buenas prácticas de organización.</p>
+          <div class="tech-pills">
+            <span>Python</span><span>Git</span>
+          </div>
         </div>
+
       </div>
     </section>
 
+    <!-- FORMACIÓN -->
     <section id="formacion">
-      <h2>Formación</h2>
-
-      <div class="item">
-        <h3>Técnico Superior en Desarrollo de Software – 3° Año</h3>
-        <p>Instituto Técnico de Formación Superior "Leopoldo Marechal"</p>
+      <div class="section-header" data-aos="fade-up">
+        <h2>Formación</h2>
+        <p class="section-sub">Mi camino hasta acá</p>
       </div>
 
-      <div class="item">
-        <h3>Curso Introducción a Python</h3>
-        <p>Codo a Codo (GCBA)</p>
-      </div>
+      <div class="timeline" data-aos="fade-up" data-aos-delay="100">
 
-      <div class="item">
-        <h3>Inglés</h3>
-        <p>Básico – inglés técnico en curso</p>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="item-header">
+              <h3>Técnico Superior en Desarrollo de Software — 3° Año</h3>
+              <span class="item-date">2024 – presente</span>
+            </div>
+            <p>Instituto Técnico de Formación Superior "Leopoldo Marechal"</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="item-header">
+              <h3>Análisis de Datos — SQL, Excel, Python, Power BI</h3>
+              <span class="item-date">2025 – presente</span>
+            </div>
+            <p>Formación autodidacta estructurada en análisis y visualización de datos</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="item-header">
+              <h3>Curso Introducción a Python</h3>
+              <span class="item-date">2023</span>
+            </div>
+            <p>Codo a Codo — GCBA</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="item-header">
+              <h3>Inglés técnico</h3>
+              <span class="item-date">En curso</span>
+            </div>
+            <p>Nivel básico — lectura técnica en inglés</p>
+          </div>
+        </div>
+
       </div>
     </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <div class="contacto-inner" data-aos="fade-up">
+        <h2>¿Hablamos?</h2>
+        <p class="contacto-sub">
+          Estoy buscando mi primera experiencia en IT. Si tenés una propuesta,
+          una duda o simplemente querés charlar de tecnología, escribime.
+        </p>
+        <a href="https://mail.google.com/mail/?view=cm&to=fedepolitodev@gmail.com" target="_blank" rel="noopener noreferrer" class="btn-primary btn-big">
+          <i class="fa-solid fa-envelope"></i> fedepolitodev@gmail.com
+        </a>
+        <div class="contacto-socials">
+          <a href="https://github.com/fedepolito" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> github.com/fedepolito
+          </a>
+          <a href="https://www.linkedin.com/in/federico-polito" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i> linkedin.com/in/federico-polito
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    © 2026 Federico Polito
+    <span>© 2026 Federico Polito</span>
+    <span>Hecho con <i class="fa-solid fa-heart" style="color: var(--accent)"></i> en Buenos Aires</span>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, offset: 60 });
+
+    // Nav mobile toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navUl = document.querySelector('nav ul');
+    toggle.addEventListener('click', () => navUl.classList.toggle('open'));
+
+    // Cerrar nav al hacer click en link (mobile)
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => navUl.classList.remove('open'));
+    });
+
+    // Nav link activo al hacer scroll
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('nav ul a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
