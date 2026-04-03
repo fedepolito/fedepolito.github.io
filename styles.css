@@ -347,3 +347,20 @@ footer {
     font-size: 1.15rem;
   }
 }
+
+/* Estilos para dos botones por proyecto */
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.project-link.live {
+  background: #2ea043;
+}
+
+.project-link.live:hover {
+  background: #3fb950;
+  transform: translateX(5px);
+}
